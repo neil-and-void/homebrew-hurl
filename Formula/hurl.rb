@@ -5,20 +5,20 @@
 class Hurl < Formula
   desc "Postman for terminal workflows"
   homepage "https://github.com/neil-and-void/hurl"
-  version "0.3.4"
+  version "0.3.9"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/neil-and-void/hurl/releases/download/v0.3.4/hurl_Darwin_arm64.tar.gz"
-      sha256 "c496e7a87fe9637a0516001422dd9155230f2dba91b9f6c1d78353689be6727a"
+    if Hardware::CPU.intel?
+      url "https://github.com/neil-and-void/hurl/releases/download/v0.3.9/hurl_Darwin_x86_64.tar.gz"
+      sha256 "5b3208e7375825bcf6179b6f8cd50afd29674f7bf07082266dd0ece1a5318c8d"
 
       def install
         bin.install "hurl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/neil-and-void/hurl/releases/download/v0.3.4/hurl_Darwin_x86_64.tar.gz"
-      sha256 "fad3acceb7c927a7e1f962a1f37f544155eb09a3bc313cf844e1d90e3542a0d2"
+    if Hardware::CPU.arm?
+      url "https://github.com/neil-and-void/hurl/releases/download/v0.3.9/hurl_Darwin_arm64.tar.gz"
+      sha256 "01a0b4038d43291c11f3a54c692e3108125679afac32285a58da7be6bde5909f"
 
       def install
         bin.install "hurl"
@@ -27,17 +27,17 @@ class Hurl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/neil-and-void/hurl/releases/download/v0.3.4/hurl_Linux_arm64.tar.gz"
-      sha256 "ed4eb4122febb59e2abc55d81609662fdd785e4ebca8619d880f9476a197ebcc"
+    if Hardware::CPU.intel?
+      url "https://github.com/neil-and-void/hurl/releases/download/v0.3.9/hurl_Linux_x86_64.tar.gz"
+      sha256 "2a897c0ff84a480460089c76112fc69e1ebe816449026b20694789e475f3b620"
 
       def install
         bin.install "hurl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/neil-and-void/hurl/releases/download/v0.3.4/hurl_Linux_x86_64.tar.gz"
-      sha256 "1c15798e3df89e82b154ac1ea41f767b1a40b6cd7bd6b829f89e3d2bdf18f0dd"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/neil-and-void/hurl/releases/download/v0.3.9/hurl_Linux_arm64.tar.gz"
+      sha256 "2d4991a7dcda81fd807556e06cfd582ee5530b0daee3e4c725c765bc18189bea"
 
       def install
         bin.install "hurl"
