@@ -5,20 +5,20 @@
 class Hurl < Formula
   desc "Postman for terminal workflows"
   homepage "https://github.com/neil-and-void/hurl"
-  version "0.4.2"
+  version "0.4.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/neil-and-void/hurl/releases/download/v0.4.2/hurl_Darwin_x86_64.tar.gz"
-      sha256 "36fe816a3e6fb5d98502fe60e0de6c42d12358896c8307f2f8caefeeef256cff"
+      url "https://github.com/neil-and-void/hurl/releases/download/v0.4.3/hurl_Darwin_x86_64.tar.gz"
+      sha256 "6126552425c808c73d6b0d9f2792432eec3a7de98750242fcdac684b3a817a7c"
 
       def install
         bin.install "hurl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/neil-and-void/hurl/releases/download/v0.4.2/hurl_Darwin_arm64.tar.gz"
-      sha256 "df4874b8b71e36a65fa0c2250d1c8dc95bfa192d8d09b2c7e5a2fd27a3a8466e"
+      url "https://github.com/neil-and-void/hurl/releases/download/v0.4.3/hurl_Darwin_arm64.tar.gz"
+      sha256 "26266c1a6a5ecbadbc48a36e4ed77679a64a92bd84d54dfc68c0ac4d4f6b3aa0"
 
       def install
         bin.install "hurl"
@@ -28,16 +28,16 @@ class Hurl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/neil-and-void/hurl/releases/download/v0.4.2/hurl_Linux_x86_64.tar.gz"
-      sha256 "01f7ab2e3e74a399446e691e56b9d7fee615c6dcc5b3cf36a83a60fe6eb81d53"
+      url "https://github.com/neil-and-void/hurl/releases/download/v0.4.3/hurl_Linux_x86_64.tar.gz"
+      sha256 "354b55f616d0967dfd145eab130177c2dc873d4144bdcba8cfabed59a7664d83"
 
       def install
         bin.install "hurl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/neil-and-void/hurl/releases/download/v0.4.2/hurl_Linux_arm64.tar.gz"
-      sha256 "d0f8f4e1efdb133e4e2c7ec3566d30bc2c429cb1ec8fda971305cbaaee7f96ac"
+      url "https://github.com/neil-and-void/hurl/releases/download/v0.4.3/hurl_Linux_arm64.tar.gz"
+      sha256 "6d855b373d1bf8ac9c9a08740967264888b6f7ce05b3dae0dff2ad6beb29b407"
 
       def install
         bin.install "hurl"
